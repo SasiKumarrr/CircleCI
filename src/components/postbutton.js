@@ -24,7 +24,7 @@ const Postbutton = () => {
 
   return (
     <div>
-      <h1>Full stack api call</h1>
+      <h1>Fullu stack api call</h1>
       <label>
         Name:
       <input type='text' onChange={(e)=>setname(e.target.value)}/>
