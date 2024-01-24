@@ -23,6 +23,7 @@
 #             branches:
 #               only:
 #                 - main
+
 version: 2.1
 
 orbs:
@@ -31,10 +32,14 @@ orbs:
 jobs:
   install_and_start:
     executor: node/default
+    working_directory: ~/Reactwork 
     steps:
       - checkout
       - node/install-packages:
           pkg-manager: npm
+      - run:
+          name: Install Dependencies
+          command: npm install
       - run:
           name: Start App
           command: npm start
